@@ -3,6 +3,10 @@ body {
     font-family: georgia,garamond,serif;
 }
 
+a {
+    color:inherit;
+}
+
 .title {
     font-size: 50px;
 }
