@@ -10,10 +10,16 @@ body {
 a {
     color: inherit;
 }
-
+  
 .title {
     font-size: 3em;
 }
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 2em;
+    }
+  }
 
 .info {
     margin-top: 150px;
