@@ -3,6 +3,10 @@ body {
     font-family: georgia,garamond,serif;
 }
 
+.special-character {
+    font-family: "Noto Serif Armenian", "Noto Serif Georgian", "Noto Serif", serif;
+}
+
 a {
     color: inherit;
 }
