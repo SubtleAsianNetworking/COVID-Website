@@ -1,0 +1,35 @@
+body {
+    background-color: #E6E6FA;
+    font-family: georgia,garamond,serif;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.info {
+    padding: 150px 150px 50px 150px;
+    text-align: center;
+}
+
+.buttons-bar{
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    background: transparent;
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+}
+    
+.button:hover {
+    color: black;
+    border: 1px solid black;
+    background: white;
+    transition: all 0.4s ease 0s;
+}
