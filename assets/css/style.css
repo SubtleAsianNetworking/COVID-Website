@@ -207,12 +207,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   transition: 0.5s;
   color: #fff !important;
-  background: #47536e;
+  background: #6b6bb3;
   position: relative;
 }
 
 .download-btn:hover {
-  background: #6b6bb3;
+  background: #47536e;
 }
 
 .download-btn i {
