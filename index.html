@@ -43,26 +43,42 @@
         </div>
 
         <div class="language-tab">
-            <a class="lang-btn" onclick="openTab(event, 'english')">English</a>
-            <a class="lang-btn" onclick="openTab(event, 'chinese-simplified')">Chinese (简体中文)</a>
-            <a class="lang-btn" onclick="openTab(event, 'chinese-traditional')">Chinese (繁體中文)</a>
-            <a class="lang-btn" onclick="openTab(event, 'korean')">Korean (한국어) </a>
-            <a class="lang-btn" onclick="openTab(event, 'vietnamese')">Vietnamese (Tiếng Việt)</a>
+            <a id = "english-btn" class="lang-btn" onclick="openTab(event, 'english')">English</a>
+            <a id = "chinese-simplified-btn" class="lang-btn" onclick="openTab(event, 'chinese-simplified')">Chinese (简体中文)</a>
+            <a id = "chinese-traditional-btn" class="lang-btn" onclick="openTab(event, 'chinese-traditional')">Chinese (繁體中文)</a>
+            <a id = "korean-btn" class="lang-btn" onclick="openTab(event, 'korean')">Korean (한국어) </a>
+            <a id = "vietnamese-btn" class="lang-btn" onclick="openTab(event, 'vietnamese')">Vietnamese (Tiếng Việt)</a>
         </div>
         
         <script>
+
+        window.addEventListener('load', function () {
+            if (typeof(Storage) !== "undefined") {
+                const language = localStorage.getItem("language");
+                if (language) {
+                    $('#details').load("languages/"+language+".html");
+                    document.getElementById("details").style.display = "block";
+                    document.getElementById(language+"-btn").className += " active";
+                }
+            }
+        })
+         
         function openTab(evt, lang) {
-        tablinks = document.getElementsByClassName("lang-btn");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace("active", "");
-        }
-        
-        evt.currentTarget.className += " active";
-        document.getElementById("details").style.display = "block";
-        $("#details").load("languages/"+lang+".html"); 
-        $('html,body').animate({
-            scrollTop: $("#details").offset().top
-        }, 'slow');
+            tablinks = document.getElementsByClassName("lang-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace("active", "");
+            }
+            
+            evt.currentTarget.className += " active";
+            document.getElementById("details").style.display = "block";
+            $("#details").load("languages/"+lang+".html"); 
+            $('html,body').animate({
+                scrollTop: $("#details").offset().top
+            }, 'slow');
+
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("language", lang);
+            }
         }
          
         </script>
