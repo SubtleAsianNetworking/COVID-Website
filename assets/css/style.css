@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 section#languages.languages{
-  padding: 30px 0px 0px 0px !important;
+  padding: 30px 0px !important;
 }
 
 #languages .lang-btn:hover {
