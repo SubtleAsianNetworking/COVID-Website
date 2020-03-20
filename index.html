@@ -64,6 +64,9 @@
         evt.currentTarget.className += " active";
         
         $("#details").load("languages/"+lang+".html"); 
+        $('html,body').animate({
+            scrollTop: $("#details").offset().top
+        }, 'slow');
         }
          
         </script>
