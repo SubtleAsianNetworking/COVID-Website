@@ -52,18 +52,13 @@
         
         <script>
         function openTab(evt, lang) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
         tablinks = document.getElementsByClassName("lang-btn");
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace("active", "");
         }
         
         evt.currentTarget.className += " active";
-        
+        document.getElementById("details").style.display = "block";
         $("#details").load("languages/"+lang+".html"); 
         $('html,body').animate({
             scrollTop: $("#details").offset().top
@@ -97,7 +92,7 @@
   <main id="main">
 
     <!-- ======= Details Section ======= -->
-    <section id="details" class="details">
+    <section id="details" class="details" style="display: none">
     </section><!-- End Details Section -->
   </main>
 
