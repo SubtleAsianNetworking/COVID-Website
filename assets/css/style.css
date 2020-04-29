@@ -314,6 +314,15 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.section-title h3 {
+  font-size: 30px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 800;
+  color: #47536e;
+}
+
 .section-title p {
   margin-bottom: 0;
 }
@@ -897,6 +906,15 @@ section {
   background: #eff2f8;
   text-align: center;
   font-size: 15px;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: #47536e;
 }
 
 #footer .footer-newsletter h4 {
