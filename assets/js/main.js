@@ -63,18 +63,18 @@
     $('.venobox').venobox();
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
-    dots: true,
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        autoplay: true,
+        loop: true,
+        dots: true,
       },
-      768: {
-        items: 1
-      },
-      900: {
-        items: 2
+      992: {
+        items: 2,
+        mouseDrag: false,
+        clickDrag: false,
       }
     }
   });
